@@ -55,7 +55,23 @@ class _MyHomePageState extends State<MyHomePage> {
                 fixedCrossAxisCountType: false,
                 mainAxisExtent: 100,
               ),
+              child: const Text('SliverGridDelegateWithMaxCrossAxisExtent'),
+            ),
+            const SizedBox(height: 50),
+            const Text('setting mainAxisExtent to 0'),
+            ElevatedButton(
+              onPressed: () => jumpToGridViewDelegatePage(
+                fixedCrossAxisCountType: true,
+                mainAxisExtent: 0,
+              ),
               child: const Text('SliverGridDelegateWithFixedCrossAxisCount'),
+            ),
+            ElevatedButton(
+              onPressed: () => jumpToGridViewDelegatePage(
+                fixedCrossAxisCountType: false,
+                mainAxisExtent: 0,
+              ),
+              child: const Text('SliverGridDelegateWithMaxCrossAxisExtent'),
             ),
             const SizedBox(height: 50),
             const Text('setting mainAxisExtent to -100'),
@@ -71,7 +87,7 @@ class _MyHomePageState extends State<MyHomePage> {
                 fixedCrossAxisCountType: false,
                 mainAxisExtent: -100,
               ),
-              child: const Text('SliverGridDelegateWithFixedCrossAxisCount'),
+              child: const Text('SliverGridDelegateWithMaxCrossAxisExtent'),
             ),
           ],
         ),
